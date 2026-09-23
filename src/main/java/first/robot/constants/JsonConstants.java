@@ -1,18 +1,14 @@
 package first.robot.constants;
 
-import org.wpilib.system.Filesystem;
-
 import coppercore.parameter_tools.json.JSONHandler;
 import coppercore.parameter_tools.json.JSONSyncConfigBuilder;
-import coppercore.parameter_tools.json.adapters.OptionalTypeAdapterFactory;
 import coppercore.parameter_tools.path_provider.EnvironmentHandler;
 import coppercore.wpilib_interface.controllers.Controllers;
+import org.wpilib.system.Filesystem;
 
 public class JsonConstants {
   public static EnvironmentHandler environmentHandler;
   public static JSONHandler jsonHandler;
-
-
 
   public static JSONHandler loadConstants() {
 
@@ -24,7 +20,7 @@ public class JsonConstants {
 
     Controllers.applyControllerConfigToBuilder(jsonSyncSettings);
 
-    jsonSyncSettings.addJsonTypeAdapterFactory(new OptionalTypeAdapterFactory());
+    // jsonSyncSettings.addJsonTypeAdapterFactory(new OptionalTypeAdapterFactory());
 
     var pathProvider = environmentHandler.getEnvironmentPathProvider();
 
@@ -44,6 +40,6 @@ public class JsonConstants {
   public static FeatureFlags featureFlags;
   public static CANBusAssignment canBusAssignment;
 
-  public static Controllers controllers;  
+  public static Controllers controllers;
   public static OperatorConstants operatorConstants;
 }

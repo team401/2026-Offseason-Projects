@@ -20,14 +20,13 @@ public class FeatureFlags {
   public void logFlags() {
     System.out.println("Feature flags:");
 
-
     System.out.println(" - useElevatorProject: " + useElevatorProject);
     System.out.println(" - useHomingSwitch: " + useHomingSwitch);
     System.out.println(" - useTuningServer: " + useTuningServer);
     System.out.println(" - usePhoenixDiagnosticServer: " + usePhoenixDiagnosticServer);
     System.out.println(" - logPeriodicTiming: " + logPeriodicTiming);
 
-    Logger.recordOutput("FeatureFlags/useElevatorProject", useElevatorProject);    
+    Logger.recordOutput("FeatureFlags/useElevatorProject", useElevatorProject);
     Logger.recordOutput("FeatureFlags/useHomingSwitch", useHomingSwitch);
     Logger.recordOutput("FeatureFlags/useTuningServer", useTuningServer);
     Logger.recordOutput("FeatureFlags/usePhoenixDiagnosticServer", usePhoenixDiagnosticServer);
