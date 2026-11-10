@@ -30,6 +30,7 @@ public class JsonConstants {
     operatorConstants = jsonHandler.getObject(new OperatorConstants(), "OperatorConstants.json");
     featureFlags = jsonHandler.getObject(new FeatureFlags(), "FeatureFlags.json");
     canBusAssignment = jsonHandler.getObject(new CANBusAssignment(), "CANBusAssignment.json");
+    elevatorConstants = jsonHandler.getObject(new ElevatorConstants(), "ElevatorConstants.json");
 
     controllers =
         jsonHandler.getObject(new Controllers(), operatorConstants.controllerBindingsFile);
@@ -42,4 +43,5 @@ public class JsonConstants {
 
   public static Controllers controllers;
   public static OperatorConstants operatorConstants;
+  public static ElevatorConstants elevatorConstants;
 }
