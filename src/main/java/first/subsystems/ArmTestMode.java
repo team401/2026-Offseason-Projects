@@ -4,7 +4,7 @@ import com.google.errorprone.annotations.OverridingMethodsMustInvokeSuper;
 
 import coppercore.wpilib_interface.tuning.TestModeDescription;
 
-public enum ArmTest implements TestModeDescription {
+public enum ArmTestMode implements TestModeDescription {
     // Arm-related test modes
     ArmVoltageTuning("Voltage"),
     ArmCurrentTuning("Current"),
